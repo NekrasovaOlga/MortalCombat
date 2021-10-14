@@ -1,5 +1,5 @@
 (() => {
-    
+    const arena=document.querySelector('.arenas');	
     let player1 = {
         name: 'Harli',
         hp: 100,
@@ -19,10 +19,10 @@
         }
     }
     function createPlayer(namePlayer, event){
-
+       		
         let player1 = document.createElement('div')
         player1.className = namePlayer
-        arenas.appendChild(player1)
+        arena.appendChild(player1)
 
         let progressbar = document.createElement('div')
         progressbar.className = 'progressbar'
