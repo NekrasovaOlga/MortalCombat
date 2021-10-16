@@ -58,7 +58,7 @@
     function winner(player){
         randowbtn.disabled = true
         randowbtn.style.display = 'none'
-        
+
         const titleWin = createElement('div', 'titleWin')	
         titleWin.innerText = `${player.name} YOU WIN`
         arena.appendChild(titleWin)
@@ -70,11 +70,12 @@
         player.hp -= mathRandom();
         if (player.hp <= 0){
             hp.style.width = '0px'
-            
-            if (player.player == '1'){
-              return   winner(player2) 
-            }
-            winner(player)
+            if (player.player === player1.player){
+                return  winner(player2) 
+             
+            } 
+            winner(player1)
+           
            
         } else{
             hp.style.width = player.hp + '%'
